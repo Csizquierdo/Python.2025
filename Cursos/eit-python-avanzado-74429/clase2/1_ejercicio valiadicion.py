@@ -1,5 +1,5 @@
 """
-A partir de dos variables llamadas nombre y edad:
+A partir de dos variables llamadas nombre y edad
 crear una variable que almacene si se cumplen las siguientes condiciones,
 y mostrar al usuario True o False:
     - nombre sea diferente de cuatro asteriscos ****
