@@ -1,4 +1,4 @@
-# Condicionales
+# Condicionales  1
 contraseña = "admin"
 respuesta = input("Ingresa la contraseña: ")
 
