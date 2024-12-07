@@ -14,6 +14,10 @@ inventario = {
 3. Se compraron 5 uvas.
 4. Solicitar al usuario qué producto está buscando, y, si está disponible,
 pedir la cantidad, venderlo y mostrar el inventario. La cantidad no debe superar el stock.
+
+👇 LO NUEVO:
+5. Crear un nuevo diccionario con 3 productos, agregarlos al diccionario principal.
+6. Calcular el número total de productos en el inventario.
 """
 
 inventario = {"manzanas": 10, "naranjas": 5, "peras": 8}
@@ -43,3 +47,16 @@ if producto in inventario:
         print("Venta realizada. Inventario actualizado:", inventario)
 else:
     print("No está disponible.")
+
+# 5. Crear un nuevo diccionario con 3 productos, agregarlos al diccionario principal.
+mas_productos = {
+    "limón": 12,
+    "sandía": 3,
+    "melón": 7,
+}
+inventario.update(mas_productos)
+print(inventario)
+
+# 6. Calcular el número total de productos en el inventario.
+stock_inventario = sum(inventario.values())
+print("El stock total del inventario es:", stock_inventario)
