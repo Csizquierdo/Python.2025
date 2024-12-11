@@ -9,15 +9,12 @@ URL = (
 
 
 respuesta = requests.get(URL)
-print(respuesta)
-      
-"""
+
 if respuesta.status_code == 200:
-    diccionario = respuesta.json()
+    diccionario = respuesta.json()  
     temperatura = diccionario["main"]["temp"]
     clima = diccionario["weather"][0]["description"]
     print(f"En la ciudad de {ciudad} hay una temperatura de {temperatura}ºC")
     print(f"Clima: {clima}")
 else:
     print(respuesta.status_code)
-"""
