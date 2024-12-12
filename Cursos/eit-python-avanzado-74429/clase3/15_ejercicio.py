@@ -30,7 +30,7 @@ usuario_nombre: str = input("ingrese un usuario: ").lower().strip().capitalize()
 
 
 for user in usuarios:
-    for nombres, nacionalidad in usuarios[user].items():
+    for nombres, nacionalidad in usuarios.items():
 
     if usuario_nombre == usuarios[]["nombre"]:
         print(usuarios[]["nacionalidades"])
