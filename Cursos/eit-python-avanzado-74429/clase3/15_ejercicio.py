@@ -20,16 +20,17 @@ usuarios = [
     },
 ]
 
-"""
-nacionalidad_italiana_de_cintia: str = usuarios[0]["nacionalidades"][1]
-print(nacionalidad_italiana_de_cintia)
-"""
+
+
+#nacionalidad_italiana_de_cintia: str = usuarios[0]["nacionalidades"][1]
+#print(nacionalidad_italiana_de_cintia)
+
 
 usuario_nombre: str = input("ingrese un usuario: ").lower().strip().capitalize()
 
 
-for usuario_nombre in usuarios
-    
+for user in usuarios:
+    for nombres, nacionalidad in usuarios[user].items():
 
-    if usuarios[]["nombre"] == usuario_nombre:
-        print(usuarios[0]["nacionalidades"])
+    if usuario_nombre == usuarios[]["nombre"]:
+        print(usuarios[]["nacionalidades"])
