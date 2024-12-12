@@ -14,7 +14,7 @@ persona = {
     "edad": 30,
     "es_estudiante": False,
     "cursos": ["Python", "JavaScript"],
-}
+} 
 for clave in persona.keys():
     print(clave)
 
