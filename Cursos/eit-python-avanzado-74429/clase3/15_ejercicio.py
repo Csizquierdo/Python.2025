@@ -29,7 +29,7 @@ usuario_nombre: str = input("ingrese un usuario: ").lower().strip().capitalize()
 
 
 for usuario_nombre in usuarios
-    for 
+    
 
     if usuarios[]["nombre"] == usuario_nombre:
         print(usuarios[0]["nacionalidades"])
