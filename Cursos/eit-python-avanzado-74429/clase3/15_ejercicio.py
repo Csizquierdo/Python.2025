@@ -4,7 +4,6 @@ Si lo encuentra, mostrar sus nacionalidades
 """
 
 
-
 usuarios = [
     {
         "nombre": "Cintia",
@@ -20,17 +19,12 @@ usuarios = [
     },
 ]
 
-
-
-#nacionalidad_italiana_de_cintia: str = usuarios[0]["nacionalidades"][1]
-#print(nacionalidad_italiana_de_cintia)
-
-
 usuario_nombre: str = input("ingrese un usuario: ").lower().strip().capitalize()
 
-
 for user in usuarios:
-    for nombres, nacionalidad in usuarios[user].items():
+    indice: int = usuarios.index(user)
+    for valor in user.values():
+        if usuario_nombre == valor:    
+            nacionalidad: str = usuarios[indice]["nacionalidades"]
+            print(f"La nacionalidad es: '{nacionalidad}'")
 
-    if usuario_nombre == usuarios[]["nombre"]:
-        print(usuarios[]["nacionalidades"])
