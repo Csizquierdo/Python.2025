@@ -22,9 +22,13 @@ usuarios = [
 usuario_nombre: str = input("ingrese un usuario: ").lower().strip().capitalize()
 
 for user in usuarios:
+<<<<<<< HEAD
     indice: int = usuarios.index(user)
     for valor in user.values():
         if usuario_nombre == valor:    
             nacionalidad: str = usuarios[indice]["nacionalidades"]
             print(f"La nacionalidad es: '{nacionalidad}'")
+=======
+    for nombres, nacionalidad in usuarios.items():
+>>>>>>> 360d57bcea66e3c0f88f4da549f04f9e3f9a4b43
 
