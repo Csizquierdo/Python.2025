@@ -1,0 +1,290 @@
+from Estructura_Intro import *
+nuevo(0,"inicio");
+#################################################################
+def Ej_ya_hechos():
+	#Con tab colocaremos aquí las practicas hechas
+	pass
+limpiar();
+print("""\033[1;37;44m\n
+╔═════════════════════════════════════════════════════════════════════════════╗
+║                                                                             ║
+║    ╔══════╗    ╦       ╦   ╔═══╦═══╗   ╦       ╦    ╔═════╗    ╔╗      ╦    ║
+║    ║      ╚╗   ╚╗     ╔╝       ║       ║       ║   ╔╝     ╚╗   ║╚╗     ║    ║
+║    ║       ║    ╚╗   ╔╝        ║       ║       ║   ║       ║   ║ ╚╗    ║    ║
+║    ║      ╔╝     ╚╗ ╔╝         ║       ║       ║   ║       ║   ║  ╚╗   ║    ║
+║    ╠══════╝       ╚╦╝          ║       ╠═══════╣   ║       ║   ║   ╚╗  ║    ║
+║    ║               ║           ║       ║       ║   ║       ║   ║    ╚╗ ║    ║
+║    ║               ║           ║       ║       ║   ╚╗     ╔╝   ║     ╚╗║    ║
+║    ╩               ╩           ╩       ╩       ╩    ╚═════╝    ╩      ╚╝    ║
+║                                                                             ║
+╠═════════════════════════════════════════════════════════════════════════════╣
+║                                                                             ║
+║                                ÁMBITOS                                      ║
+║                               ---------                                     ║
+╚═════════════════════════════════════════════════════════════════════════════╝\033[0;m
+ * Ámbito, es una región en el espacio en memoria con un nombre dado  para
+          podre accceder a los datos guardados en el espacio en memoria y
+          que estos sean accesibles directamente.
+          (Recordad que puede haber un mismo nombre como atributo y como 
+          metodo o funcion en distintos ámbitos)
+ * Ámbito, es observable por su indentación, estructuras de tabulación")
+ * Un espacio en memoria con un nombre hereda del Nombre la referencia a 
+          un dato en un tiempo y espacio.
+	 Inmutable: su contenido no puede cambiarse en tiempo de ejecución.
+	 Si en el espacio nombrado su dato No cambia durante el tiempo de 
+	      ejecución se denomina constante (constantes, tuple etc)
+	 Mutable: su contenido puede cambiarse en tiempo de ejecución.
+	 Si en el espacio nombrado su dato Si cambia durante el tiempo de
+	      ejecución se denomina variable (variable, lista, diccionario, etc
+	 Puede haber muchos espacio nombrado igual en distintos ámbitos y sus
+	      datos podrán ser distintos o no.
+
+ * Una variable es espacio que tendrá un nombre para poder acceder a ella 
+          y sus características serán dadas por el dato que se incorpore 
+          (tipeado dinámico)
+ * Una variable de clase es compartida por todas las instancias de una cla
+          se. Se definen dentro de la clase (después del encabezado de la
+          clase) pero nunca dentro de un método.
+	Este tipo de variables no se utilizan con tanta frecuencia como las 
+	      variables de instancia.
+ * Una variable de instancia se define dentro de un método y pertenece a 
+          un objeto determinado de la clase instanciada. 
+http://docs.python.org.ar/tutorial/3/classes.html
+""");
+pausa();limpiar();
+#################################################################
+print("""\033[1;37;44m\n
+╔═════════════════════════════════════════════════════════════════════════════╗
+║                                                                             ║
+║    ╔══════╗    ╦       ╦   ╔═══╦═══╗   ╦       ╦    ╔═════╗    ╔╗      ╦    ║
+║    ║      ╚╗   ╚╗     ╔╝       ║       ║       ║   ╔╝     ╚╗   ║╚╗     ║    ║
+║    ║       ║    ╚╗   ╔╝        ║       ║       ║   ║       ║   ║ ╚╗    ║    ║
+║    ║      ╔╝     ╚╗ ╔╝         ║       ║       ║   ║       ║   ║  ╚╗   ║    ║
+║    ╠══════╝       ╚╦╝          ║       ╠═══════╣   ║       ║   ║   ╚╗  ║    ║
+║    ║               ║           ║       ║       ║   ║       ║   ║    ╚╗ ║    ║
+║    ║               ║           ║       ║       ║   ╚╗     ╔╝   ║     ╚╗║    ║
+║    ╩               ╩           ╩       ╩       ╩    ╚═════╝    ╩      ╚╝    ║
+║                                                                             ║
+╠═════════════════════════════════════════════════════════════════════════════╣
+║                                                                             ║
+║                                Estructuras                                  ║
+║                               -------------                                 ║
+║                              programa lineal/por objetos                    ║
+║                                                                             ║
+║                         * linealidad  sentencia de disrupcion               ║
+║                         * llamados a métodos internos                       ║
+║                         * llamados a métodos externos                       ║
+║                                  * propios                                  ║
+║                                  * ajenos Librerías                         ║
+╚═════════════════════════════════════════════════════════════════════════════╝\033[0;m
+http://docs.python.org.ar/tutorial/3/classes.html
+https://pythones.net/instalando-python-3-que-es-un-ide/""")
+pausa();limpiar();
+
+
+def funcion_void():
+
+	numero = 88;
+	print("\nLugar: dentre de la funcion void - Momento: 6 - Valor de Numero: ",numero);
+
+def funcion_int(numero):
+	numero = 77;
+	print("\nLugar: dentre de la funcion void - Momento: 8 - Valor de Numero: ",numero);
+	return numero;
+
+numero = 222;
+print("\nLugar: Main - Momento: 1 - Valor de Numero: ",numero);
+for numero in range (10):
+	print("\nLugar: Bucle for  - Momento: 2 - Valor de Numero: ",numero);
+print("\nLugar: Main - Momento: 3 - Valor de Numero: ",numero);
+
+if (numero != 0):
+	numero = 55;
+	print("\nLugar: Condicion if - Momento: 4 - Valor de Numero: ",numero);
+
+print("\nLugar: Main - Momento: 5 - Valor de Numero: ",numero);
+funcion_void();
+print("\nLugar: Main luego de la funcion void - Momento: 7 - Valor de Numero: ",numero);
+
+numero=funcion_int(numero);
+print("\nLugar: Main luego de la funcion - Momento: 9 - Valor de Numero: ",numero);
+nuevo(1);
+
+#################################################################
+#IO Ej_AMBITOS_1");
+variable = "RAIZ"
+class clase_1:
+	variable = "CLASE_1"
+	def prueba_ambitos():
+		variable = "FUNCION"
+		cont = 0
+		for i in variable:
+			variable = "BUCLE"
+#			print ("valor de I es : "+ i);
+			cont = cont + 1
+			print ("valor de variable = "+variable, end=" ");
+			print ("valor de contador es : "+ str(cont));
+			if cont>2:
+				variable = "CONDICIONAL"
+				print ("valor de variable = "+variable, end=" ");
+				print ("valor de contador es : "+ str(cont));
+		print ("valor de variable = "+variable);
+	print ("1er valor de variable = "+variable);
+	prueba_ambitos()
+	print ("valor de variable = "+variable);
+print ("valor de variable = "+variable);
+class clase_2:
+	variable = "CLASE_2"
+	def prueba_ambitos_2():
+		pass
+	print ("valor de variable = "+variable);
+print ("valor de variable = "+variable);
+nuevo(2);
+#################################################################
+#IO Ej_AMBITOS_2");
+def prueba_ambitos3():
+	def funcion_local():
+		variable = "variable local"
+	def funcion_nonlocal():
+		nonlocal variable
+		variable = "variable no local"
+	def funcion_global():
+		global variable
+		variable = "variable global"
+	variable = "variable de prueba"
+	funcion_local()
+	print("Luego de la asignación local a la variable:", variable)
+	funcion_nonlocal()
+	print("Luego de la asignación no local a la variable:", variable)
+	funcion_global()
+	print("Luego de la asignación global a la variable:", variable)
+prueba_ambitos3()
+print("Ambito glogal:", variable)
+nuevo(3);
+#################################################################
+#IO Ej_AMBITOS_3");
+lista_datos_ingresados=[]
+pares = ["no","existe","en","este","ámbito"];
+impares = ["no","existe","en","este","ámbito"];
+def funcion():
+	print("10' datos mínimo, 0 para salir");
+	ingreso_num=input("ingrese un dato numérico entero > 0  :");
+	ingreso_num=int(ingreso_num);
+	if ingreso_num==0:
+		return("nada")
+#	if isinstance(ingreso, int) and ingreso !=0:
+#		print("Integer: %d" % ingreso)
+#	ingreso_num=int(ingreso);
+	lista_datos_ingresados=[]
+	pares = [];
+	impares = [];
+	print("Cero-'0' para salir");
+	while ingreso_num>0:
+		lista_datos_ingresados.append(ingreso_num);
+		ingreso_num=int(input("ingrese un dato numerico entero > 0  :"));
+	print ("lista : "+str(lista_datos_ingresados));
+	print ("lista lugar 2 : "+str(lista_datos_ingresados[2]));
+	print ("máximo: "+str(max(lista_datos_ingresados))+" de la lista");
+	print ("mínimo: %d de lo la lista" % min(lista_datos_ingresados));
+	print ("datos: %d en la lista" % len(lista_datos_ingresados));
+	print ("lista original: "+str(lista_datos_ingresados));
+	lista_datos_ingresados.append("999999")  # Agrega elemento al final de lista con append();
+	print ("Agregue elemento al final de lista con append ('9999'): "+str(lista_datos_ingresados));
+	lista_datos_ingresados.pop()  # Borra último elemento de lista con método pop();
+	print ("Borre último elemento de lista con método pop(): "+str(lista_datos_ingresados));
+	lista_datos_ingresados.sort()  # Ordena la lista con el método sort();
+	print ("Ordena la lista con el método sort(): "+str(lista_datos_ingresados));
+	for elementos in lista_datos_ingresados:
+		if elementos%2 == 0:# es par
+			print ("pares  :" +str(elementos));
+			pares.append(str(elementos))
+		else:
+			print ("Impares  :" +str(elementos));
+			impares.append(str(elementos))
+	print (pares);
+	print (impares);
+	return (lista_datos_ingresados)
+print (funcion());
+print ((lista_datos_ingresados));
+print (pares);#este no es una variable que existe en esta ámbito
+print (impares);
+nuevo(4);
+#################################################################
+#IO Ej_AMBITOS_4");
+def exterior():
+	variable = "local"
+	print("exterior - principio :", variable);
+	def interior():
+		nonlocal variable
+		variable = "nonlocal"
+		print("interior:", variable);
+	interior();
+	print("exterior - final:", variable);
+exterior();
+nuevo(5);
+#################################################################
+#IO Ej_AMBITOS_5");
+print ("La variable `global` puede ser usada dentro y fuera de una funcion",);
+def funcion_ext():
+	variable = 20
+	print("Antes de llamar a la funcion_int : ", variable);
+	print("llamamos a la funcion_int");
+	def funcion_int():
+		global variable
+		variable = 25
+		print("Dentro de la funcion_int: ", variable);
+	funcion_int();
+	print("Salimos de la funcion_int");
+	print("Después de llamar a la funcion_int: ", variable);
+funcion_ext();
+print("variable en funcion_ext : ", variable);
+nuevo(6);
+#################################################################
+#IO Ej_AMBITOS_6");
+def prueba_ambitos():
+	def hacer_local():
+		algo = "algo local"
+	def hacer_nonlocal():
+		nonlocal algo
+		algo = "algo no local"
+	def hacer_global():
+		global algo
+		algo = "algo global"
+	algo = "algo de prueba"
+	hacer_local();
+	print("Luego de la asignación local:", algo);
+	hacer_nonlocal();
+	print("Luego de la asignación no local:", algo);
+	hacer_global();
+	print("Luego de la asignación global:", algo);
+
+prueba_ambitos();
+print("In global scope:", algo);
+nuevo(7);
+#################################################################
+#IO Ej_AMBITOS_7");
+print("este programa dara un error");
+distancia=10#             		Define variable local (ámbito programa principal);
+velocidad=distancia/1
+def acelerar():
+    global distancia# 			Declara la variable 'distancia' como global y se podrá utilizar dentro de la función
+    global velocidad
+    tiempo=10# 					Declara variable local (ámbito función);
+    distancia=distancia+5# 		Se incrementa la velocidad en 5 distancia
+    velocidad=distancia/tiempo
+    print('Tiempo:', tiempo);
+	#
+print("velocidad=distancia/tiempo")
+print("distancia= "+ str(distancia));
+print("tiempo inicial = 1 ");
+print('Velocidad inicial:', velocidad);# Muestra variable 'distancia'
+print("Llama a la función acelerar()")
+acelerar();# Llama a la función acelerar();
+print('Velocidad tras acelerar:', velocidad);# Muestra variable 'distancia'
+print("distancia= "+ str(distancia));
+print("tiempo dos= ...'NameError...'");
+# Intenta mostrar la variable 'tiempo. Se produce una excepción (error) de tipo NameError
+# porque la variable no pertenece a este ámbito: # NameError: name 'tiempo' is not defined
+print(tiempo);#<--------------------error
+nuevo(8,"fin");
+#################################################################
