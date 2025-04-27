@@ -56,7 +56,7 @@ def pausa():
 def nuevo(numero,estado=None):
     if estado=="inicio":#▒ ▓  ╝ ╗ ╚ ╔ ╩ ╦ ╠╣ ═ ╬ ¤ ╚ ═ « » ¤ ░ ▒ ▓ │ ┤ ┐└ ┴ ┬ ├ ─ ┼  ┘ ┌ ¦ █ ▄  ▀¯-_≡±‗=¾¶§¸°¨·¹³² ■'''")
         limpiar();
-        print("""\033[1;37;44m\n
+        print(F'''{Fore.WHITE+Back.BLUE}
 ╔═════════════════════════════════════════════════════════════════════════════╗
 ║                                                                             ║
 ║    ╔══════╗    ╦       ╦   ╔═══╦═══╗   ╦       ╦    ╔═════╗    ╔╗      ╦    ║
@@ -68,7 +68,39 @@ def nuevo(numero,estado=None):
 ║    ║               ║           ║       ║       ║   ╚╗     ╔╝   ║     ╚╗║    ║
 ║    ╩               ╩           ╩       ╩       ╩    ╚═════╝    ╩      ╚╝    ║
 ║                                                                             ║
-╠═════════════════════════════════════════════════════════════════════════════╣\033[0;m
+╠═════════════════════════════════════════════════════════════════════════════╣{Style.RESET_ALL}{Fore.WHITE+Back.RED}
+╠═════════════════════════════════════════════════════════════════════════════╣{Style.RESET_ALL}
+║                                                                             ║
+║                                                                             ║
+║      ╔═╗  ╔═╗  ╔═╗         ╦       ╦   ╔═══╦═══╗     ╔╗      ╦              ║
+║      ╚╗╚╗ ║ ║ ╔╝╔╝         ║       ║       ║         ║╚╗     ║              ║
+║       ╚╗╚═╝ ╚═╝╔╝          ║       ║       ║         ║ ╚╗    ║              ║
+║     ╔══╝       ╚══╗        ║       ║       ║         ║  ╚╗   ║              ║
+║     ╚══╗ ╔╗ ╔╗ ╔══╝        ║       ║       ║         ║   ╚╗  ║              ║
+║       ╔╝╔╝║ ║╚╗╚╗          ║       ║       ║         ║    ╚╗ ║              ║
+║      ╔╝╔╝ ║ ║ ╚╗╚╗         ╚╗     ╔╝       ║         ║     ╚╗║              ║
+║      ╚═╝  ╚═╝  ╚═╝          ╚═════╝        ╩         ╩      ╚╝              ║
+║                                                                             ║
+║                                                                             ║
+╚═════════════════════════════════════════════════════════════════════════════╝{Style.RESET_ALL}''')
+
+        print('''{Fore.WHITE+Back.BLUE}
+╔═════════════════════════════════════════════════════════════════════════════╗
+║TEMARIO:                                                                     ║
+║--------                                                                     ║
+║Unidad 1 - Introducción                                                      ║
+║● ¿Qué es Python?                                                            ║
+║● Ventajas y desventajas                                                     ║
+║● Ecosistema Python y Comunidad –Librerías extendidas                        ║
+║● Descarga –Opensource                                                       ║
+║● Instalación, configuración y hardware necesario                            ║
+║● Errores sintácticos y lógicos, localización en pantalla y correcciones     ║
+║● Importancia del versionado                                                 ║
+║● GIT Colaborativo –Pair Programming                                         ║
+║   o Introducción a GIT                                                      ║
+║   o Creando un repositorio, clonar, branches                                ║
+║   o Borrar, guardar (STASH), recuperar (POP)                                ║
+╠═════════════════════════════════════════════════════════════════════════════╣
 ║TEMARIO:                                                                     ║
 ║--------                                                                     ║
 ║Unidad 1 - Introducción                                                      ║
@@ -214,7 +246,7 @@ def nuevo(numero,estado=None):
 ║● Python y Amazon - AWS IoT                                                  ║
 ║● Protocolo MQTT                                                             ║
 ╚═════════════════════════════════════════════════════════════════════════════╝
-        """);
+        ''');
         #time.sleep(1.5)
         pausa()
         limpiar()
