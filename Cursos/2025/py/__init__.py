@@ -30,7 +30,7 @@ except Exception as error_:
 from colorama import *
 
 try:
-    from prettytable import *
+    from prettytable import * # type: ignore
 except Exception as error_:
     import pip
     pip.main(['install', 'prettytable'])
@@ -246,24 +246,24 @@ def nuevo(numero,estado=None):
 ║● Python y Amazon - AWS IoT                                                  ║
 ║● Protocolo MQTT                                                             ║
 ╚═════════════════════════════════════════════════════════════════════════════╝
-        ''');
+        ''')
         #time.sleep(1.5)
         pausa()
         limpiar()
     else:
         if numero == 0:
             print(f"\n\t\tTeórico")
-            print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+            print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
             pausa()
         else:
             print(f"\n\t\tFin del ejercicio Nº {numero}")
             pausa()
             limpiar()
-            print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+            print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
             print(f"\n\t\tInicio del ejercicio Nº {numero+1}")
         if estado=="fin":
             limpiar()
-            print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+            print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
             print(f"\n\t\tFin de la práctica")
 """
 if __name__ == "__main__":
