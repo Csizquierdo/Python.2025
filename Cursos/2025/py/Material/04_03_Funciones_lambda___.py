@@ -84,6 +84,7 @@ limpiar()
 impar = lambda numero: numero%2 != 0
 impar(5)
  - operaciones de cadena
+
 #slicing en sentido inverso:
 revertir = lambda cadena: cadena[::-1]
 print(f"{revertir('Python es genial')=}")
